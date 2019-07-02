@@ -30,7 +30,7 @@
             var letterStyle = {   //자바 스크립트 객체
                 padding: 10,    //px, pt 같은 단위 사용 못함, 숫자로 저장
                 margin: 10,
-                backgroundColor: "yellow",  // camle case로 "-" 대신 대문자로 구분
+                backgroundColor: this.props.bgcolor,  // camle case로 "-" 대신 대문자로 구분
                 color: "#333",  //문자는 문자열로 저장
                 display: "inline-block",
                 fonFfamily: "monospace",
@@ -53,11 +53,11 @@
     }
     ReactDOM.render(
         <div>
-        <Letter>A</Letter>
-        <Letter>P</Letter>
-        <Letter>P</Letter>
-        <Letter>L</Letter>
-        <Letter>E</Letter>
+        <Letter bgcolor="red">A</Letter>
+        <Letter bgcolor="blue">P</Letter>
+        <Letter bgcolor="yellow">P</Letter>
+        <Letter bgcolor="green">L</Letter>
+        <Letter bgcolor="purple">E</Letter>
         </div>,
         destination
     );
