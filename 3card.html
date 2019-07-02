@@ -14,7 +14,7 @@
                 render() {
                     var squareStyle = {
                         height: 150,
-                        backgroundColor: "#FF6663",
+                        backgroundColor: this.props.color
                     };
                     return (
                         <div style={squareStyle}> </div>
@@ -27,10 +27,13 @@
                         fontFamily: "sans-serif",
                         fontWeight: "bold",
                         padding: 13,
-                        margin: 0
+                        margin: 0,
+                        textAlign: "center"
                     };
                     return (
-                        <div style={labelStyle}>#FF6663</div>
+                        <p style={labelStyle}>
+                            {this.props.color}
+                        </p>
                     );
                 }
             }
@@ -41,19 +44,26 @@
                         width: 150,
                         padding: 0,
                         backgroundColor: "#FFF",
-                        boxShadow: "0px 0px 5px #666"
+                        boxShadow: "0px 0px 5px #666",
+                        display: "inline-block",
+                        margin: 10
                     };
                     return (
                         <div style={cardStyle}>
-                            <Square/>
-                            <Label/>
+                            <Square color={this.props.color}/>
+                            <Label color={this.props.color}/>
                         </div>
                     );
                 }
             }
+
     ReactDOM.render(
         <div>
-            <Card />
+            <Card color="#FF6663"/>
+            <Card color="#FFA737"/>
+            <Card color="#FFB322"/>
+            <Card color="#FFC037"/>
+            <Card color="#FFD800"/>
         </div>,
         document.querySelector("#container")
     );
