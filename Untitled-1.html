@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+
+class HellWorld extends React.Component {
+    render() {
+        return <p>안녕, {this.props.name}!{this.props.children}</p>
+    }
+}
+ReactDOM.render(
+    <div>
+    <HellWorld name="피카츄"/>
+    <div>aaaa</div><div>bbbbbb</div>
+    <HellWorld name="파이리"/>
+    <HellWorld name="꼬부기"/>
+    <HellWorld name="아구몬"/>
+    <HellWorld name="파피몬"/>
+    <HellWorld name="파닥몬"/>
+    </div>,
+    document.querySelector("#container")
+);
+</script>
+
+</body>
+
+</html>
