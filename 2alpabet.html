@@ -28,19 +28,26 @@
     class Letter extends React.Component {
         render() {
             var letterStyle = {   //자바 스크립트 객체
-                padding: 10,
+                padding: 10,    //px, pt 같은 단위 사용 못함, 숫자로 저장
                 margin: 10,
                 backgroundColor: "yellow",  // camle case로 "-" 대신 대문자로 구분
-                color: "#333",
+                color: "#333",  //문자는 문자열로 저장
                 display: "inline-block",
                 fonFfamily: "monospace",
                 fontSize: 32,
                 textAlign: "center"
             };
             return(
+                
+                /* <style> 사용시
                 <div className="letter">
                     {this.props.children}
-                </div>
+                </div> */
+
+                <div style={letterStyle}>
+                    {this.props.children}
+                </div> 
+                
             );
         }
     }
