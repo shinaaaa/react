@@ -6,7 +6,7 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <style>
-        div div div {
+        .letter {
             padding: 10px;
             margin: 10px;
             background-color: yellow;
@@ -28,7 +28,7 @@
     class Letter extends React.Component {
         render() {
             return(
-                <div>
+                <div className="letter">
                     {this.props.children}
                 </div>
             );
