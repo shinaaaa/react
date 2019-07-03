@@ -9,23 +9,20 @@ class Counter extends React.Component {
 }
 
 class CounterParent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state= {
+        state = {
             count: 0
         };
 
-        this.increase = this.increase.bind(this);
-    }
-    increase() {
+    increase = () => {
         this.setState({
-            count: this.state.count+1
+            count: this.state.count + 1
         })
     }
     render() {
+        console.log(this.state.count);
         return (
             <div>
-                <Counter display={this.state.count}/>
+                <Counter display={this.state.count} />
                 <button onClick={this.increase}> + </button>
             </div>
         );
@@ -33,7 +30,7 @@ class CounterParent extends React.Component {
 }
 ReactDOM.render(
     <div>
-        <CounterParent/>
+        <CounterParent />
     </div>,
     document.querySelector("#container")
 );
