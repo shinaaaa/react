@@ -11,13 +11,18 @@ class LightningCounter extends React.Component {
         /* bind : 컴포넌트에 이벤트 연결 */
         this.timerTick = this.timerTick.bind(this);
     }
-    timerTick() {
-       /*  setState : 객체의 값을 갱신할 수 있게 해준다. */
+    /*  setState : 객체의 값을 갱신할 수 있게 해준다. */
+    /* timerTick() {
+        this.setState({
+            strikes: this.state.strikes + 100
+        });
+    } */
+    timerTick = () => {
         this.setState({
             strikes: this.state.strikes + 100
         });
     }
-   /*  componentDidMount : 컴포넌트가 렌더링(마운트)된 후에 실행 */
+    /*  componentDidMount : 컴포넌트가 렌더링(마운트)된 후에 실행 */
     componentDidMount() {   //render 뒤에 react 엔진이 자동으로 호출
         setInterval(this.timerTick, 1000);
     }
